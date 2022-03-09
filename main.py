@@ -40,7 +40,7 @@ async def stats(message):
 @client.command()
 async def nft(message,*,slug):
     response = requests.get(f'https://api.opensea.io/collection/{slug}/stats').json()['stats']
-    await message.send(f'Your Slug Name:-{slug}\nThere Stats:-\n\n{response}')
+    await message.send(f'Slug Name:-{slug}\nThere Stats:-\n\n{response}')
     
 
 load_dotenv()
